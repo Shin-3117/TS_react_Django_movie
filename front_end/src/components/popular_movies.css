@@ -1,0 +1,45 @@
+.popularMoviesContainer{
+    display: flex;
+    padding: 24px;
+}
+
+.popularMovieCard{
+    margin-right: 24px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popularMovieImg{
+    height: 300px;
+    
+}
+
+.movieInfo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.movieInfo:hover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+/* 
+display: none;   
+눈에도 안보이고 존재도 없고 크기(공간)도 모두 없음.(전혀 존재하지 않음)
+
+opacity: 0;
+눈에 안보일 뿐 존재와 크기(공간)가 모두 있음.
+
+visibility: hidden;
+눈에 안보이고 존재도 없지만 최초에 가지고 있던 크기(공간)는 유지하고 있음.
+*/

@@ -1,0 +1,6 @@
+pip install django
+pip install djangorestframework
+# cors 인증용 라이브러리
+pip install django-cors-headers
+# OpenAPI Specification (OAS)
+pip install drf-spectacular
