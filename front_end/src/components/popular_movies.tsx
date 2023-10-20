@@ -22,8 +22,6 @@ interface Movie {
 const PopularMovies = () => {
   const [movies, setMovies] = useState<Movie[] | null>([])
 
-
-
   useEffect(() => {
     const fetchData = async (page:number) => {
       const data = await popularMovies(page)
@@ -37,11 +35,6 @@ const PopularMovies = () => {
     fetchData(1)
   }, [])
 
-
-
-  const openModal = ()=>{
-
-  }
   return (
     <>
     {movies && (
@@ -54,7 +47,7 @@ const PopularMovies = () => {
         { movies.map(movie => (
             <article className='popularMovieCard'>
               <img className='popularMovieImg' src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`} alt={movie.title} />
-              <div className='movieInfo' onClick={openModal}>
+              <div className='movieInfo'>
                 <h3 key={movie.id}>{movie.title}</h3>
                 <p>{movie.vote_average}</p>
               </div>
