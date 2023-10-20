@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import popularMovies from '../api/popular'
 import './popular_movies.scss';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 interface Movie {
   adult: boolean;
