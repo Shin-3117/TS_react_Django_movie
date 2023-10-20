@@ -1,3 +1,17 @@
+.popularMoviesSection{
+    /* display: flex; */
+    position: relative;
+}
+.btnL{
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.btnR{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
 .popularMoviesContainer{
     display: flex;
     padding: 24px;

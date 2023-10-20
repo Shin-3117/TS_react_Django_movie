@@ -8,6 +8,7 @@ const movie_key = config.movie_key
 const popularMovies =async (page:number) => {
   const url = `https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=${page}`
   const headers = {
+    // withCredentials: true,
     accept: 'application/json',
     Authorization: `Bearer ${movie_key}`
   }
@@ -16,8 +17,10 @@ const popularMovies =async (page:number) => {
     url : url,
     headers : headers
   }
-  const response = await axios(set_axios);
-  return response.data
+
+    const response = await axios(set_axios);
+    return response.data
+
 }
 
 export default popularMovies;

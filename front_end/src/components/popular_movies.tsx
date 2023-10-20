@@ -36,10 +36,12 @@ const PopularMovies = () => {
   return (
     <>
     {movies && (
-      <section>
+      <section className='popularMoviesSection'>
         <h2>유행중인 영화</h2>
+          <button className='btnL'>&lt;</button>
         <div className='popularMoviesContainer'>
-          {movies.map(movie => (
+          {
+          movies.map(movie => (
             <article className='popularMovieCard'>
             <img className='popularMovieImg' src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`} alt={movie.title} />
             <div className='movieInfo'>
@@ -49,6 +51,7 @@ const PopularMovies = () => {
             </article>
           ))}
         </div>
+          <button className='btnR'>&gt;</button>
       </section>
       )}
     </>
