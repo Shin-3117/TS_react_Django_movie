@@ -1,0 +1,25 @@
+.modalBackground{
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+.modalContainer{
+    z-index: 2;
+    display: flex;
+    .movieImg{
+        width: 50%;
+    }
+    .movieInfo{
+        width: 50%;
+        background-color: white;
+        color: black;
+    }
+}
