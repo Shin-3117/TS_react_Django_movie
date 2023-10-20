@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import popularMovies from '../api/popular'
 import './popular_movies.css';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface Movie {
   adult: boolean;
@@ -21,6 +22,11 @@ interface Movie {
 
 const PopularMovies = () => {
   const [movies, setMovies] = useState<Movie[] | null>([])
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [current, setCurrent] = useState();
+
   useEffect(() => {
     const fetchData = async (page:number) => {
       const data = await popularMovies(page)
@@ -38,11 +44,12 @@ const PopularMovies = () => {
     {movies && (
       <section className='popularMoviesSection'>
         <h2>유행중인 영화</h2>
-          <button className='btnL'>&lt;</button>
+          
         <div className='popularMoviesContainer'>
+          <button className='btnL'>&lt;</button>
           {
-          movies.map(movie => (
-            <article className='popularMovieCard'>
+            movies.map(movie => (
+              <article className='popularMovieCard'>
             <img className='popularMovieImg' src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`} alt={movie.title} />
             <div className='movieInfo'>
             <h3 key={movie.id}>{movie.title}</h3>
@@ -50,8 +57,10 @@ const PopularMovies = () => {
             </div>
             </article>
           ))}
+          
+          
+        <button className='btnR'>&gt;</button>
         </div>
-          <button className='btnR'>&gt;</button>
       </section>
       )}
     </>

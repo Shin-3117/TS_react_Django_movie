@@ -1,33 +1,53 @@
+:root{
+    --post-height: 300px;
+    --post-width: 200px;
+    --color-1 : #190482;
+    --color-2 : #7752FE;
+    --color-3 : #8E8FFA;
+    --color-4 : #C2D9FF;
+}
+
 .popularMoviesSection{
     /* display: flex; */
     position: relative;
+    
 }
-.btnL{
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
-.btnR{
-    position: absolute;
-    top: 50%;
-    right: 0;
-}
+
 .popularMoviesContainer{
     display: flex;
-    padding: 24px;
+    padding: 0px 20px;
+    /* overflow: auto; */
+    position: relative;
+    
 }
 
 .popularMovieCard{
-    margin-right: 24px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding: 10px; */
+    /* background-color: var(--color-2); */
 }
-
+.btnL{
+    position: fixed;
+    left: 0;
+    background-color: var(--color-3);
+    opacity: 0.5;
+    border: none;
+    height: var(--post-height);
+    z-index: 1;
+}
+.btnR{
+    position: sticky;
+    right: 0;
+    background-color: var(--color-3);
+    opacity: 0.5;
+    border: none;
+    height: var(--post-height);
+}
 .popularMovieImg{
-    height: 300px;
-    
+    height: var(--post-height);
 }
 
 .movieInfo{
