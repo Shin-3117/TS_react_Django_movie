@@ -10,7 +10,7 @@ const ModalMovie = ({movie}:ModalMovieProps)=>{
   const [modalOpen,setModalOpen] = useState(false)
   const modalOnOff = () =>{
     setModalOpen(!modalOpen);
-}
+  }
 
 return(
 <>
