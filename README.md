@@ -4,7 +4,7 @@
 [![stackticon](https://firebasestorage.googleapis.com/v0/b/stackticon-81399.appspot.com/o/images%2F1698289763662?alt=media&token=fd723b54-e66e-4969-9e8e-d2a0731e5188)](https://github.com/msdio/stackticon)
 
 ## 컴포넌트 구조도
-![컴포넌트 구조도](./front_end/../컴포넌트_구조도.drawio.png)
+<img src="./front_end/../컴포넌트_구조도.drawio.png" style="background-color:white">
 
 ## 프론트엔드 개발
 타입스크립트, 리엑트, Axios를 사용하여 개발을 진행했습니다.
