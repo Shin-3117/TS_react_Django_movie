@@ -6,12 +6,13 @@ import {
 import {
   HomePage,
 } from './pages';
+import Layout from './components/Layout';
 
   
   
   const route = (
   
-    <Route>
+    <Route element={<Layout />}>
       <Route path="/" element={<HomePage />} />
     </Route>
   );

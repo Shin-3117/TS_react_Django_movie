@@ -1,0 +1,11 @@
+@use '../../../style/color.scss' as c;
+.wrap{
+  background-color: c.$color-1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  .link{
+    color: white;
+  }
+}

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import {popularMovies} from '../api/movies'
+import {topRateMovies} from '../api/movies'
 import styles from './movies.module.scss';
 
-import Modal_movie from './modal_movie';
+import ModalMovie from './modal_movie';
 
 import Movie from '../interface';
 
-const PopularMovies = () => {
+const TopRateMovies = () => {
   const [movies, setMovies] = useState<Movie[] | null>([])
 
   useEffect(() => {
     const fetchData = async (page:number) => {
-      const data = await popularMovies(page)
+      const data = await topRateMovies(page)
       if(data.results){
         setMovies(data.results);
       }
@@ -23,7 +23,7 @@ const PopularMovies = () => {
     <>
     {movies && (
     <section className={styles.popularMoviesSection}>
-      <h2>유행중인 영화</h2>
+      <h2>고평가 작품</h2>
         
       <div className={styles.popularMoviesContainer}>
         {/* <button type='button' className='btnL'>&lt;</button> */}
@@ -34,7 +34,7 @@ const PopularMovies = () => {
               <div className={styles.movieInfo}>
                 <h3 key={movie.id}>{movie.title}</h3>
                 <p>{movie.vote_average}</p>
-                <Modal_movie movie={movie} />
+                <ModalMovie movie={movie} />
               </div>
             </article>
         ))}
@@ -49,4 +49,4 @@ const PopularMovies = () => {
   );
 };
 
-export default PopularMovies;
+export default TopRateMovies;

@@ -1,3 +1,14 @@
+@use '../style/color.scss' as c;
+.modalOpenBtn{
+    padding: 8px;
+    border: 0px;
+    border-radius: 16px;
+    background-color: c.$color-2;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+}
+
 .modalBackground{
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
@@ -17,11 +28,27 @@
     .movieImg{
         max-width: 50%;
         max-height: 80vh;
-
     }
     .movieInfo{
         width: 50%;
         background-color: white;
         color: black;
+        padding: 12px;
+        position: relative;
+        h3{
+            margin-top: 20px;
+        }
+        button{
+            position: absolute;
+            right: 4%;
+            width: 30px; height: 30px;
+            background-color: c.$color-2;
+            border: 0;
+            border-radius: 50%;
+        }
+        .movieInfo1{
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
